@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./styles/App.css";
+import headShot from "assets/picture.jpg";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const MailAddress = ({ email, subject, body, children }) => {
+		return (
+			<a
+				href={`mailto:${email}?subject=${
+					encodeURIComponent(subject) || ""
+				}&body=${encodeURIComponent(body) || ""}`}
+			>
+				{children}
+			</a>
+		);
+	};
+
+	return (
+		<div className="App">
+			<header className="App-header">
+				<img src={headShot} className="picture" />
+				<h2>Hi, Website Coming Soon</h2>
+				<h5>
+					If you need to contact me, please email{" "}
+					<MailAddress
+						email="bprobst1029@gmail.com"
+						subject="Hi! I found your website"
+						body=""
+					>
+						bprobst1029@gmail.com
+					</MailAddress>{" "}
+					or{" "}
+					<MailAddress
+						email="bprobst@quae.app"
+						subject="Hi! I found your website"
+						body=""
+					>
+						bprobst@quae.app
+					</MailAddress>{" "}
+					or{" "}
+					<MailAddress
+						email="bprobst@stevens.edu"
+						subject="Hi! I found your website"
+						body=""
+					>
+						bprobst@stevens.edu
+					</MailAddress>
+				</h5>
+			</header>
+		</div>
+	);
 }
 
 export default App;
