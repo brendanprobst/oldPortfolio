@@ -1,5 +1,6 @@
 {
   "files": {
+<<<<<<< Updated upstream
     "main.css": "/static/css/main.8c8b27cf.chunk.css",
     "main.js": "/static/js/main.ab313c1b.chunk.js",
     "main.js.map": "/static/js/main.ab313c1b.chunk.js.map",
@@ -19,5 +20,27 @@
     "static/js/2.c02d6dc6.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.ab313c1b.chunk.js"
+=======
+    "main.css": "/static/css/main.3248422e.chunk.css",
+    "main.js": "/static/js/main.1d096520.chunk.js",
+    "main.js.map": "/static/js/main.1d096520.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.00450cfe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.00450cfe.js.map",
+    "static/js/2.d7199228.chunk.js": "/static/js/2.d7199228.chunk.js",
+    "static/js/2.d7199228.chunk.js.map": "/static/js/2.d7199228.chunk.js.map",
+    "static/js/3.90f45d62.chunk.js": "/static/js/3.90f45d62.chunk.js",
+    "static/js/3.90f45d62.chunk.js.map": "/static/js/3.90f45d62.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3248422e.chunk.css.map": "/static/css/main.3248422e.chunk.css.map",
+    "static/js/2.d7199228.chunk.js.LICENSE.txt": "/static/js/2.d7199228.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/picture.7687b9b0.jpg": "/static/media/picture.7687b9b0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00450cfe.js",
+    "static/js/2.d7199228.chunk.js",
+    "static/css/main.3248422e.chunk.css",
+    "static/js/main.1d096520.chunk.js"
+>>>>>>> Stashed changes
   ]
 }
