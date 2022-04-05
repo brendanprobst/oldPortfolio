@@ -1,0 +1,49 @@
+@use "../../var";
+@import "../../mixins";
+
+#product {
+	// @include flex-container(row, center, center, nowrap);
+	.sticky {
+		#phone {
+			width: 10rem;
+			height: 15rem;
+			transition: background-color 0.25s linear;
+			&.section1 {
+				background-color: pink;
+				transition: background-color 0.25s linear;
+			}
+			&.section2 {
+				background-color: blue;
+				transition: background-color 0.25s linear;
+			}
+			&.section3 {
+				background-color: green;
+				transition: background-color 0.25s linear;
+			}
+		}
+	}
+	.scrolling {
+		.scroll-section {
+			.content {
+				padding-left: 1rem;
+				border-left-width: 1rem;
+				border-left-style: solid;
+			}
+		}
+		#section1 {
+			.content {
+				border-left-color: pink;
+			}
+		}
+		#section2 {
+			.content {
+				border-left-color: blue;
+			}
+		}
+		#section3 {
+			.content {
+				border-left-color: green;
+			}
+		}
+	}
+}

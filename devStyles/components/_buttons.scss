@@ -1,0 +1,106 @@
+@use "../var";
+@import "../mixins";
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	font: "Red Hat Display", sans-serif;
+	cursor: pointer;
+	outline: inherit;
+	text-align: inherit;
+	padding: 0;
+	&.icon {
+		@include flex-container(row, center, center, nowrap);
+		i {
+			padding-right: 0.5rem;
+		}
+	}
+	&.primary,
+	&.secondary,
+	&.white {
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.25rem;
+	}
+	&.primary {
+		color: var.$bg;
+		background-color: var.$primary-default;
+		border: 2px solid var.$primary-default;
+		p {
+			color: var.$bg;
+		}
+		&:hover {
+			background-color: var.$primary-dark;
+		}
+	}
+	&.secondary {
+		color: var.$text-secondary;
+		border: 2px solid var.$text-secondary;
+		&:hover {
+			background-color: var.$fg;
+			color: var.$text;
+			border: 2px solid var.$text;
+		}
+	}
+	&.white {
+		background-color: var.$bg;
+		color: var.$text;
+		border: 2px solid var.$text-secondary;
+		p {
+			color: var.$text;
+		}
+		&:hover {
+			background-color: var.$fg;
+		}
+	}
+}
+.download-buttons {
+	text-align: center;
+	background: blur(15px);
+	background-color: rgba(0, 0, 0, 0.01);
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	width: min(25rem, 100%);
+	height: min-content;
+	.app-stores {
+		@include flex-container(row, center, center, nowrap);
+	}
+	.app-store-link {
+		width: 50%;
+		margin: 0.25rem;
+		.app-store-btn {
+			max-width: 100%;
+			flex: 1;
+		}
+	}
+	.web-app-link {
+		width: 100%;
+		padding: 1rem 2rem;
+		img {
+			max-height: 1.75rem;
+			padding-right: 1rem;
+		}
+		i {
+			font-size: 1.75rem;
+		}
+	}
+}
+button.select-group {
+	padding: 0.5rem;
+	opacity: 0.5;
+	border-radius: 0.25rem;
+	border: 1px solid transparent;
+
+	transition: all 0.25s linear;
+}
+button.select-group:hover {
+	opacity: 0.8;
+	background-color: var.$fg;
+	border: 1px solid transparent;
+
+	transition: all 0.25s linear;
+}
+button.select-group:active {
+	border: 1px solid var.$border;
+	transition: all 0.25s linear;
+}

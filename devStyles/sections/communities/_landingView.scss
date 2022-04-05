@@ -1,0 +1,121 @@
+@use "../../var";
+@import "../../mixins";
+@keyframes slide-down {
+	from {
+		transform: translate(0, -100%);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+.communities-page {
+	.landing-view {
+		min-height: 100vh;
+		z-index: 1;
+		@include flex-container(column, center, center, nowrap);
+		.title {
+			padding: 2rem 0;
+			margin: 0 auto;
+		}
+		.community-header {
+			@include flex-container(row, center, center, nowrap);
+			height: 20rem;
+			width: 100%;
+			.tab {
+				flex: 1;
+				background-size: cover;
+				background-position: center;
+				height: 100%;
+				// max-width: 50rem;
+				background-size: cover;
+				background-position: center;
+				position: relative;
+				cursor: pointer;
+				@include flex-container(column, center, center, nowrap);
+				h2 {
+					color: var.$bg;
+					z-index: 2;
+					font-weight: 900;
+					transition: all 0.5s linear;
+				}
+				&::after {
+					content: "";
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+					position: absolute;
+				}
+				transition: all 0.5s linear;
+			}
+			.tab:hover {
+				h2 {
+					margin-bottom: 1rem;
+					transition: all 0.5s linear;
+				}
+			}
+			.tab:hover::after {
+				background-color: rgba(0, 0, 0, 0.2);
+				transition: all 0.5s linear;
+			}
+			.schools {
+				background-image: url("/assets/img/communities/college.jpeg");
+			}
+			.companies {
+				background-image: url("/assets/img/communities/company.jpeg");
+			}
+			.projects {
+				background-image: url("/assets/img/communities/project.jpeg");
+			}
+			// &.scrolled {
+			// 	height: 4rem;
+			// 	z-index: 5;
+			// 	position: fixed;
+			// 	margin-top: 4rem;
+			// 	top: 0;
+			// 	left: 0;
+			// 	animation: slide-down 1s linear;
+			// 	.tab {
+			// 		h2 {
+			// 			font-size: var.$M;
+			// 		}
+			// 	}
+			// }
+		}
+		.learn-more {
+			margin: 0 auto;
+			text-align: center;
+			h3 {
+				padding: 2rem 0;
+			}
+		}
+	}
+}
+@media (max-width: 850px) {
+	.communities-page {
+		.landing-view {
+			width: 100%;
+			.title {
+				padding: 1rem;
+				margin: 0 auto;
+			}
+			.community-header {
+				@include flex-container(column, center, center, nowrap);
+				height: 20rem;
+				width: 100%;
+				.tab {
+					width: 100%;
+					@include flex-container(column, center, center, nowrap);
+					h2 {
+						font-weight: 700;
+						font-size: var.$L;
+					}
+					transition: all 0.5s linear;
+				}
+			}
+		}
+	}
+}
+// @media (min-width: 576px) and (max-width: 768px) {
+// }
+// @media (min-width: 768px) {
+// }

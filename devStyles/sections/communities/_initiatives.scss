@@ -1,0 +1,31 @@
+@use "../../var";
+@import "../../mixins";
+.communities-page {
+	.initiatives {
+		.title {
+			padding: 2rem 0;
+		}
+		.content {
+			@include flex-container(row, center, center, wrap);
+			width: 100%;
+			.text {
+				max-width: 30rem;
+				width: 100%;
+				min-width: none;
+				padding: 1rem;
+
+				h3 {
+					padding-left: 1rem;
+				}
+				P {
+					padding-bottom: 1.5rem;
+				}
+			}
+			img {
+				width: 100%;
+				max-width: 20rem;
+				margin: 4rem;
+			}
+		}
+	}
+}

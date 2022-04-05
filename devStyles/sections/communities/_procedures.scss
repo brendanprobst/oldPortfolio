@@ -1,0 +1,194 @@
+@use "../../var";
+@import "../../mixins";
+.communities-page {
+	.procedures {
+		width: 100%;
+		max-width: 100rem;
+
+		.title {
+			padding: 2rem 0;
+		}
+		.procedure-example-text {
+			@include flex-container(row, center, center, wrap);
+			position: relative;
+			width: 100%;
+			padding: 1rem 2rem;
+			.example-title {
+				padding: 1rem;
+				text-align: center;
+			}
+			#procedure-type {
+				position: absolute;
+				top: 0;
+			}
+			button {
+				position: absolute;
+				&#prev-group-procedure {
+					left: 0;
+				}
+				&#next-group-procedure {
+					right: 0;
+				}
+			}
+		}
+		.procedure-example-wrapper {
+			width: 100%;
+			padding: 1rem;
+			box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+			border-radius: 1rem;
+			#procedure-example {
+				width: 100%;
+				@include flex-container(row, center, center, wrap);
+				.phase {
+					margin: 1rem;
+					padding: 1rem;
+					max-width: 30rem;
+					min-width: 15rem;
+					flex: 1;
+					height: 100%;
+					position: relative;
+					box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+					background-color: var.$fg;
+					border-radius: 0.5rem;
+					.number {
+						position: absolute;
+						background-color: var.$primary-default;
+						width: 3rem;
+						height: 3rem;
+						border-radius: 1.5rem;
+						@include flex-container(column, center, center, nowrap);
+						top: 0;
+						left: 0;
+						transform: translate(-25%, -45%);
+						box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+						h3 {
+							text-align: center;
+							font-weight: 900;
+							color: var.$bg;
+						}
+					}
+					.phase-title {
+						padding-top: 1.25rem;
+					}
+					.phase-voters {
+						position: absolute;
+						top: 0;
+						right: 0;
+						margin: 0.25rem;
+						padding: 0.25rem 0.5rem;
+						border: 1px solid var.$border;
+						border-radius: 0.5rem;
+						width: min-content;
+						@include flex-container(row, flex-end, center, nowrap);
+						i {
+							padding-right: 0.5rem;
+						}
+					}
+					.consensus,
+					.turnout {
+						margin: 2rem 0;
+						height: 10px;
+						width: 100%;
+						background-color: var.$border;
+						border-radius: 3px;
+						position: relative;
+						.turnout-bar,
+						.consensus-bar {
+							border-radius: 3px;
+							border-top-right-radius: 5px;
+							border-bottom-right-radius: 5px;
+							height: 10px;
+							background-color: var.$primary-default;
+						}
+						.goal {
+							height: 10px;
+							z-index: 5;
+							border-right: 5px solid var.$danger;
+							position: absolute;
+							top: 0;
+						}
+						.label {
+							text-align: end;
+						}
+					}
+					&.complete {
+						border-top: 1rem solid var.$success;
+						.phase-voters {
+							i {
+								color: var.$success;
+							}
+						}
+					}
+					&.active {
+						border-top: 1rem solid var.$primary-light;
+						.phase-voters {
+							i {
+								color: var.$primary-light;
+							}
+						}
+					}
+					&.locked {
+						border-top: 1rem solid var.$border;
+						.phase-voters {
+							i {
+								color: var.$border;
+							}
+						}
+					}
+				}
+			}
+		}
+		.procedure-explained {
+			@include flex-container(row, space-evenly, center, wrap);
+			width: 100%;
+			padding: 2rem 0;
+			.container {
+				@include flex-container(column, flex-start, center, nowrap);
+				max-width: 20rem;
+				min-width: none;
+				margin: 1rem;
+				i {
+					padding: 1rem;
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.communities-page {
+		.procedures {
+			.title {
+				padding: 2rem 1rem;
+			}
+			.procedure-example-text {
+				@include flex-container(row, center, center, wrap);
+
+				#example-procedure-description {
+					padding: 0 2rem;
+				}
+			}
+			.procedure-example-wrapper {
+				#procedure-example {
+					width: 100%;
+					@include flex-container(column, center, center, wrap);
+
+					.phase {
+						margin: 1rem 0;
+						max-width: 20rem;
+						width: 100%;
+						min-width: 10rem;
+						flex: 1;
+						height: 100%;
+					}
+				}
+			}
+			.procedure-explained {
+				@include flex-container(column, flex-start, center, wrap);
+				.container {
+					flex-direction: row;
+				}
+			}
+		}
+	}
+}
