@@ -1,7 +1,7 @@
 {
-	"name": "quaelandingpage",
+	"name": "brendanprobstpersonalwebsite",
 	"version": "1.0.0",
-	"description": "landing page",
+	"description": "personal website for Brendan Probst",
 	"main": "index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/QuaeDev/quaeLandingPage.git"
+		"url": "git+https://github.com/brendanprobst/brendanprobst.github.io"
 	},
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/QuaeDev/quaeLandingPage/issues"
-	},
-	"homepage": "https://github.com/QuaeDev/quaeLandingPage#readme",
 	"devDependencies": {
 		"cssnano": "^5.1.5",
 		"html-minifier": "^4.0.0",

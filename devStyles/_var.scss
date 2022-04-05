@@ -1,44 +1,25 @@
-$bg: #fcfcfc;
-$fg: #eeeeee;
-$bg-dark: #555555;
-$glass: #cccccc50;
-$text: #151515;
-$text-secondary: #5f5f5f;
-$border: rgb(182, 182, 182);
-$inactive: #acacac;
-$link: #256ee2;
-$text-input: #e0e0e0;
+$bg: #000;
+$fg: #1b1b1b;
+$text: #fff;
+$text-secondary: #ffdcdc;
+$border: #1f1f1f;
+$inactive: #333;
+$link: #5d96f1;
 
-$danger: #ff0019;
-$urgent: #ff7878;
-$success: #50ba6c;
-$primary-default: #6840d9;
-$primary-light: #8f67ff;
-$primary-dark: #3c009f;
-$accent1-default: #55bdde;
-$accent1-light: #8ed6ff;
-$accent1-dark: #0085be;
-$accent2-default: #f41690;
-$accent2-light: #ff61c0;
-$accent2-dark: #bc0063;
-
-$yellow: #c7be55;
-
-$yellow-LO: #fff70770;
-$success-LO: #3bed6b70;
-$primary-light-LO: #8f67ff70;
-$accent2-light-LO: #ff61c070;
-$accent1-light-LO: #8ed6ff70;
-$primary-light-ULO: #8f67ff20;
-$accent2-light-ULO: #ff61c020;
-$accent1-light-ULO: #8ed6ff20;
-
+$success: #25c448;
+$primary-default: #d94040;
+$primary-light: #ff6767;
+$primary-dark: #ac2525;
+$accent1-default: #4547e9;
+$accent1-light: #667dff;
+$accent1-dark: #1c00be;
+$danger: #f00;
 $light: #fcfcfc;
 $dark: #151515;
 
-$font-title: "Red Hat Display", sans-serif;
-$font-body: "Poppins", sans-serif;
-
+$font-fancy: Courgette;
+$font-title: Rajdhani, sans-serif;
+$font-body: Roboto, sans-serif;
 $XXL: 3.5rem;
 $XL: 2.5rem;
 $L: 2rem;

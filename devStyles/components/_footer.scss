@@ -1,7 +1,7 @@
 @use "../var";
 @import "../mixins";
 footer {
-	background-color: var.$bg-dark;
+	background-color: var.$bg;
 	width: 100%;
 	p,
 	h6 {

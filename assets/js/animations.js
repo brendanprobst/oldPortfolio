@@ -44,12 +44,10 @@ $(document).ready(function () {
 		});
 		const typedTextSpan = document.querySelector(".typed-text");
 		const textArray = [
-			"School",
-			"Community",
-			"Club",
-			"Company",
-			"Organization",
-			"Union",
+			"Software Engineer",
+			"Student",
+			"Entrepreneur",
+			"Web Developer",
 		];
 		const typingDelay = 200;
 		const erasingDelay = 100;

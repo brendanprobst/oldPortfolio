@@ -3,30 +3,24 @@ const header = /*html*/ `<header id="header">
 				<div onclick="closeNav()" id="behind-navigation-links"></div>
 				<a href="/" class="logo-link">
 					<img
-						src="/assets/img/quae_logo_color_transparent.png"
+					src="/assets/img/initials_transparent.png"
 						alt="Quae Logo"
 						class="logo"
 						id="logo-color"
 					/>
-					<img
-						src="/assets/img/quae_logo_white.png"
-						alt="Quae Logo"
-						class="logo"
-						id="logo-white"
-					/>
 				</a>
 				<div id="navigation-links">
 				<a href="/about_us/">
-						<p>About</p>
+						<p>Projects</p>
 					</a>
 					<a href="/communities/">
-						<p>Communities</p>
+						<p>Blog</p>
 					</a>
 					<a href="https://docs.quae.app/">
-						<p>Docs</p>
+						<p>Education & Skills</p>
 					</a>
 					<a href="https://medium.com/quae-app">
-						<p>Blog</p>
+						<p>About Me</p>
 					</a>
 					
 					
@@ -35,15 +29,30 @@ const header = /*html*/ `<header id="header">
 					<i class="material-icons">menu</i>
 				</button>
 				<div class="buttons">
-					<a href="https://beta.quae.app/account/signup">
-						<button class="primary"><p>Sign Up</p></button>
+					<a href="mailto:bprobst@quae.app">
+						<button class="primary"><p>Get In Touch</p></button>
 					</a>
-					<a href="https://beta.quae.app/account/login">
-						<button class="secondary"><p>Log In</p></button>
-					</a>
+					
 				</div>
 			</div>
 		</header>`;
+
+// (function () {
+// 	const socialIcons = [
+// 		{
+// 			icon: <GitHubIcon />,
+// 			destination: "https://github.com/brendanprobst",
+// 		},
+
+// 		{
+// 			icon: <InstagramIcon />,
+// 			destination: "https://www.instagram.com/bprobst_13/",
+// 		},
+// 	];
+// 	for (icon of socialIcons) {
+// 		var icon = document.createElement("img");
+// 	}
+// })();
 
 function renderHeader() {
 	const placeholder = document.querySelector("#header-placeholder");
