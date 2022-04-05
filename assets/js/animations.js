@@ -42,6 +42,7 @@ $(document).ready(function () {
 		fadeSlidesNoMargin.forEach((fadeSlide) => {
 			appearOnScrollNoMargin.observe(fadeSlide);
 		});
+		//TYPING
 		const typedTextSpan = document.querySelector(".typed-text");
 		const textArray = [
 			"Software Engineer",
@@ -85,6 +86,17 @@ $(document).ready(function () {
 			setTimeout(type, newTextDelay + 250);
 		});
 		type();
+		//SKEW SCROLL
+		var window_height = window.innerHeight;
+
+		const skewScrollElements = document.querySelectorAll(".skew-scroll");
+		skewScrollElements.forEach((element) => skewScroll(element));
+
+		function skewScroll(element) {
+			console.log($(window).scrollTop());
+			console.log(element.getBoundingClientRect().top);
+		}
+		document.addEventListener("scroll", skewScroll);
 	});
 });
 // function fade() {

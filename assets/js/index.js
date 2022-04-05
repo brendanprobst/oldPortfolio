@@ -38,7 +38,6 @@ function renderProductImages() {
 	const section2 = document.getElementById("section2");
 	const section3 = document.getElementById("section3");
 	const phone = document.getElementById("phone");
-	console.log("here");
 	if (isInViewport(section1)) {
 		phone.classList = [];
 		phone.classList.add("section1");

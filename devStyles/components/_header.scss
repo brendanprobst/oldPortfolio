@@ -37,14 +37,10 @@
 			@include flex-container(row, space-between, center, nowrap);
 			width: 100%;
 			.logo-link {
-				#logo-white {
-					display: block;
-					opacity: 1;
-					transition: all 200ms linear;
-				}
-				#logo-color {
-					display: hidden;
-					opacity: 0;
+				#logo {
+					background-color: var.$text-secondary;
+					border-radius: 50%;
+					opacity: 0.5;
 					transition: all 200ms linear;
 				}
 			}
@@ -96,20 +92,13 @@
 			height: 2rem;
 			z-index: 14;
 			position: relative;
-			.logo {
+			#logo {
+				border-radius: 25%;
 				height: 100%;
 				width: 100%;
 				z-index: 13;
+				padding: 0.5rem;
 				position: absolute;
-			}
-			#logo-white {
-				display: hidden;
-				opacity: 0;
-				transition: all 200ms linear;
-			}
-			#logo-color {
-				display: block;
-				opacity: 1;
 				transition: all 200ms linear;
 			}
 		}

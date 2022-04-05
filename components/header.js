@@ -5,8 +5,7 @@ const header = /*html*/ `<header id="header">
 					<img
 					src="/assets/img/initials_transparent.png"
 						alt="Quae Logo"
-						class="logo"
-						id="logo-color"
+						id="logo"
 					/>
 				</a>
 				<div id="navigation-links">
