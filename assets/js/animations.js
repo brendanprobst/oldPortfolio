@@ -1,5 +1,8 @@
 $(document).ready(function () {
 	$(window).on("load", function () {
+		var window_height = window.innerHeight;
+		var document_height = $(document).height();
+		var disToScroll = document_height - window_height;
 		const fadeSlides = document.querySelectorAll(".fade-slide-in");
 
 		const appearOptions = { threshold: 0.25, rootMargin: "0px 0px -50px 0px" };
@@ -87,16 +90,45 @@ $(document).ready(function () {
 		});
 		type();
 		//SKEW SCROLL
-		var window_height = window.innerHeight;
-
-		const skewScrollElements = document.querySelectorAll(".skew-scroll");
-		skewScrollElements.forEach((element) => skewScroll(element));
 
 		function skewScroll(element) {
 			console.log($(window).scrollTop());
 			console.log(element.getBoundingClientRect().top);
+			const rotation = window.scrollY / window_height;
+			console.log(element, rotation);
+
+			// element.style.webkitTransform = `rotate(${rotation}deg)`;
+			element.animate(
+				{
+					"-webkit-transform": "rotate(" + rotation + "deg)",
+					"-moz-transform": "rotate(" + rotation + "deg)",
+					"-ms-transform": "rotate(" + rotation + "deg)",
+					"-o-transform": "rotate(" + rotation + "deg)",
+					transform: "rotate(" + rotation + "deg)",
+					zoom: 1,
+				},
+				10
+			);
 		}
+		const skewScrollElements = document.querySelectorAll(".skew-scroll");
+		skewScrollElements.forEach((element) => skewScroll(element));
+		const rotateBgImg = () => {
+			const bgImg = document.querySelector(".background-img");
+			const rotation = (window.scrollY / disToScroll) * 360;
+			bgImg.animate(
+				{
+					"-webkit-transform": "rotate(" + rotation + "deg)",
+					"-moz-transform": "rotate(" + rotation + "deg)",
+					"-ms-transform": "rotate(" + rotation + "deg)",
+					"-o-transform": "rotate(" + rotation + "deg)",
+					transform: "rotate(" + rotation + "deg)",
+					zoom: 1,
+				},
+				10
+			);
+		};
 		document.addEventListener("scroll", skewScroll);
+		// document.addEventListener("scroll", rotateBgImg);
 	});
 });
 // function fade() {

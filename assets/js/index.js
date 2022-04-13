@@ -75,7 +75,6 @@ function handleSticky() {
 		if (sticky_container_top < scroll) {
 			//and the top is at the top of the screen
 			fixed = true;
-			console.log("y00000");
 			sticky.classList.add("fixed");
 		}
 	}

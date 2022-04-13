@@ -185,10 +185,25 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  background-image: url("/assets/img/background.png");
+  background: linear-gradient(#d94040, #4547e9, #d94040);
+}
+
+.background-img {
+  background-image: url("/assets/img/background4.png");
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-filter: blur(8px);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
 .page {
