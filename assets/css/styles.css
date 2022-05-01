@@ -475,8 +475,7 @@ a {
   width: 100%;
   padding-left: 1rem;
 }
-.landing-page .landing-view h1,
-.landing-page .landing-view h2 {
+.landing-page .landing-view h1 {
   padding: 1rem;
   text-align: right;
   color: #fff;
@@ -506,6 +505,8 @@ a {
   display: inline;
   min-width: 1px;
   min-height: 4rem;
+  margin-right: 0;
+  padding: 0;
 }
 .landing-page #cursor {
   display: inline-block;
