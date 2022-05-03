@@ -1,7 +1,7 @@
 const component = /*html*/ `
 <div class="section landing-view">
 				<div class="container skew-scroll">
-					<img src="/assets/img/brendan_probst.jpg" alt="my picture" />
+					<img src="/assets/img/brendan_probst.jpg" id="profile-picture" alt="my picture" />
 					<div class="content">
 						<h1>Hi, I'm Brendan</h1>
 						<div class="subtext">
@@ -16,6 +16,7 @@ const component = /*html*/ `
 				</div>
 			</div>
 `;
-
-const helper = require("./renderComponent");
-helper.render("#landing", component);
+(function () {
+	const placeholder = document.querySelector("#landing-placeholder");
+	placeholder.innerHTML = component;
+})();

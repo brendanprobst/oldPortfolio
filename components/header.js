@@ -4,7 +4,7 @@ const header = /*html*/ `<header id="header">
 				<a href="/" class="logo-link">
 					<img
 					src="/assets/img/initials_transparent.png"
-						alt="Quae Logo"
+						alt="Brendan's Logo"
 						id="logo"
 					/>
 				</a>
@@ -36,23 +36,6 @@ const header = /*html*/ `<header id="header">
 			</div>
 		</header>`;
 
-// (function () {
-// 	const socialIcons = [
-// 		{
-// 			icon: <GitHubIcon />,
-// 			destination: "https://github.com/brendanprobst",
-// 		},
-
-// 		{
-// 			icon: <InstagramIcon />,
-// 			destination: "https://www.instagram.com/bprobst_13/",
-// 		},
-// 	];
-// 	for (icon of socialIcons) {
-// 		var icon = document.createElement("img");
-// 	}
-// })();
-
 function renderHeader() {
 	const placeholder = document.querySelector("#header-placeholder");
 	placeholder.innerHTML = header;
@@ -83,3 +66,20 @@ function closeNav() {
 	document.getElementById("behind-navigation-links").style.display = "none";
 	document.getElementById("navigation-links").style.display = "none";
 }
+
+// (function () {
+// 	const socialIcons = [
+// 		{
+// 			icon: <GitHubIcon />,
+// 			destination: "https://github.com/brendanprobst",
+// 		},
+
+// 		{
+// 			icon: <InstagramIcon />,
+// 			destination: "https://www.instagram.com/bprobst_13/",
+// 		},
+// 	];
+// 	for (icon of socialIcons) {
+// 		var icon = document.createElement("img");
+// 	}
+// })();
