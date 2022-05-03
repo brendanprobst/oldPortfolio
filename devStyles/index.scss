@@ -10,27 +10,32 @@
 * {
 	box-sizing: border-box;
 	font-size: 16px;
+	scroll-behavior: smooth !important;
 }
 html {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
+	-ms-scroll-snap-type: y proximity;
 	scroll-snap-type: y proximity;
 	overflow-x: hidden;
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	background: linear-gradient(
+		40deg,
+		var.$primary-default 5%,
+		var.$primary-dark 30%,
+		var.$primary-dark 70%,
+		var.$primary-default 95%
+	);
 }
 
 body {
 	padding: 0;
 	margin: 0;
 	overflow-x: hidden;
-	background: linear-gradient(
-		var.$primary-default,
-		var.$accent1-default,
-		var.$primary-default
-	);
 }
 .background-img {
 	background-image: url("/assets/img/background4.png");
@@ -71,6 +76,7 @@ a {
 .section,
 .section-small {
 	.title {
+		z-index: 1;
 		margin: 0 auto;
 		text-align: center;
 		padding-bottom: 5rem;
@@ -79,7 +85,10 @@ a {
 		}
 	}
 }
-
+#projects-placeholder {
+	// background-color: red;
+	padding: 10rem;
+}
 .section {
 	min-height: 100vh;
 	@include flex-container(column, center, center, nowrap);

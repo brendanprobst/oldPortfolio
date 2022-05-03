@@ -1,11 +1,11 @@
 @use "../var";
 @import "../mixins";
 footer {
-	background-color: var.$bg;
+	background-color: var.$fg;
 	width: 100%;
 	p,
 	h6 {
-		color: var.$bg;
+		color: var.$text;
 	}
 	#footer-contact {
 		align-items: center;

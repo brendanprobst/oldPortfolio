@@ -3,16 +3,7 @@ var footer = /*html*/ `
 	<div id="footer-contact">
 		<h6>Find Us Online</h6>
 		<ul class="social-icons">
-			<li>
-				<a
-					class="facebook"
-					href="https://www.facebook.com/quaeapp"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="visit quae's facebook account"
-					><i class="fa fa-facebook"></i
-				></a>
-			</li> 
+		
 			<li>
 				<a
 					aria-label="visit quae's linkedin account"
@@ -23,16 +14,7 @@ var footer = /*html*/ `
 					><i class="fa fa-linkedin"></i
 				></a>
 			</li>
-			<li>
-				<a
-					aria-label="visit quae's twitter account"
-					class="twitter"
-					href="https://twitter.com/Quae_App"
-					target="_blank"
-					rel="noopener noreferrer"
-					><i class="fa fa-twitter"></i
-				></a>
-			</li>
+			
 			<li>
 				<a
 					aria-label="visit quae's instagram account"
@@ -43,52 +25,35 @@ var footer = /*html*/ `
 					><i class="fa fa-instagram"></i
 				></a>
 			</li>
-			<li>
-				<a
-					aria-label="visit quae's youtube account"
-					class="youtube"
-					href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
-					target="_blank"
-					rel="noopener noreferrer"
-					><i class="fa fa-youtube"></i
-				></a>
-			</li>
+		
 		</ul>
 		
-		<a href="mailto:info@quae.app" id="contact-us-button">
+		<a href="mailto:bprobst1029@gmail.com" id="contact-me-button">
 			<button class="white icon">
 				<i class="material-icons">mail</i>
-				<p>Send Us A Message</p>
+				<p>Get In Touch</p>
 			</button>
 		</a>
 	</div>
 	<div id="footer-navigation">
 		<div class="nav-links">
-			<a href="/" class = "home">
-				<p>Home</p>
+			<a href="#landing" class = "home">
+				<p>Back To Top</p>
 			</a>
-			<a href="https://medium.com/quae-app" rel="noopener" class="blog">
-				<p>Blog</p>
+			<a href="#projects" rel="noopener" class="blog">
+				<p>Projects</p>
 			</a>
-			<a href="https://docs.quae.app/" rel="noopener" class="docs">
-				<p>Docs</p>
+			<a href="#education" rel="noopener" class="docs">
+				<p>Education</p>
 			</a>
-			<a href="/communities" class="about-us">
-				<p>Communities</p>
+			<a href="#skills" class="about-us">
+				<p>Skills</p>
 			</a>
-			<a href="/about_us" class="about-us">
-				<p>About</p>
+			<a href="#about-me" class="about-us">
+				<p>About Me</p>
 			</a>
 		</div>
-		<div class="footer-legal">
-			<a href="/pages/eula" class="eula">
-				<p>EULA Agreement</p>
-			</a>
-			<a href="/pages/privacy_agreement" class="privacy-policy">
-				<p>Privacy Policy</p>
-			</a>
-			<p class="copyright">Quae &copy; 2021 All Rights Reserved</p>
-		</div>
+		
 	</div>
 </footer>
 `;

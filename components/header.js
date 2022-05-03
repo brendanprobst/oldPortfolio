@@ -9,16 +9,14 @@ const header = /*html*/ `<header id="header">
 					/>
 				</a>
 				<div id="navigation-links">
-				<a href="/about_us/">
+				<a href="#projects">
 						<p>Projects</p>
 					</a>
 					<a href="/communities/">
 						<p>Blog</p>
 					</a>
-					<a href="https://docs.quae.app/">
-						<p>Education & Skills</p>
-					</a>
-					<a href="https://medium.com/quae-app">
+					
+					<a href="#about-me">
 						<p>About Me</p>
 					</a>
 					
