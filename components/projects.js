@@ -1,6 +1,7 @@
 const projects = /*html*/ `
 <div class="section projects">
-<h1>Projects</h1>
+<h2>Projects</h2>
+
 </div>
 `;
 (function () {

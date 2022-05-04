@@ -95,7 +95,6 @@ $(document).ready(function () {
 			console.log($(window).scrollTop());
 			console.log(element.getBoundingClientRect().top);
 			const rotation = window.scrollY / window_height;
-			console.log(element, rotation);
 
 			// element.style.webkitTransform = `rotate(${rotation}deg)`;
 			element.animate(
@@ -129,6 +128,19 @@ $(document).ready(function () {
 		};
 		document.addEventListener("scroll", skewScroll);
 		// document.addEventListener("scroll", rotateBgImg);
+
+		//HEADER
+
+		document.addEventListener("scroll", function () {
+			let scroll = window.scrollY;
+			console.log("scrolled");
+			if (scroll > 40) {
+				document.querySelector("#header").classList.add("scrolled");
+			}
+			if (scroll < 40) {
+				document.querySelector("#header").classList.remove("scrolled");
+			}
+		});
 	});
 });
 // function fade() {

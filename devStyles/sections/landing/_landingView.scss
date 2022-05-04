@@ -2,16 +2,16 @@
 @import "../../mixins";
 
 .landing-view {
-	padding: 10rem 1rem;
-	height: calc(100vh - 5rem);
+	padding: 1rem;
+	height: calc(100vh);
 	@include flex-container(row, space-evenly, center, wrap);
 	#profile-picture {
 		border: 12px solid var.$primary-default;
 		box-shadow: 5px 0 10px -8px var.$dark;
 	}
 	.container {
-		box-shadow: 0 0px 80px -20px var.$primary-dark;
-		backdrop-filter: blur(4px);
+		box-shadow: 0 0px 80px -20px var.$primary-default;
+		backdrop-filter: blur(40px);
 		-webkit-backdrop-filter: blur(4px);
 		@include flex-container(row, flex-start, center, nowrap);
 

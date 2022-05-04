@@ -33,21 +33,11 @@ const header = /*html*/ `<header id="header">
 				</div>
 			</div>
 		</header>`;
-
 function renderHeader() {
 	const placeholder = document.querySelector("#header-placeholder");
 	placeholder.innerHTML = header;
 }
 renderHeader();
-document.onscroll = function () {
-	let scroll = window.scrollY;
-	if (scroll > 40) {
-		document.querySelector("#header").classList.add("scrolled");
-	}
-	if (scroll < 40) {
-		document.querySelector("#header").classList.remove("scrolled");
-	}
-};
 var navVisible = false;
 function toggleNav() {
 	if (navVisible) {
