@@ -85,6 +85,7 @@ p {
 }
 *.secondary {
 	color: var.$text-secondary;
+	opacity: 0.75;
 }
 *.white {
 	color: var.$bg;
@@ -104,10 +105,15 @@ p {
 *.primary-light {
 	color: var.$primary-light;
 }
+*.accent {
+	color: var.$accent1-dark;
+}
 *.danger {
 	color: var.$danger;
 }
-
+*.bold {
+	font-weight: 700;
+}
 *.link {
 	color: var.$link;
 	&:hover {

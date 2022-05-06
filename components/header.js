@@ -12,7 +12,7 @@ const header = /*html*/ `<header id="header">
 				<a href="#projects">
 						<p>Projects</p>
 					</a>
-					<a href="/communities/">
+					<a href="https://medium.com/@brendanprobst">
 						<p>Blog</p>
 					</a>
 					
@@ -27,7 +27,7 @@ const header = /*html*/ `<header id="header">
 				</button>
 				<div class="buttons">
 					<a href="mailto:bprobst@quae.app">
-						<button class="primary"><p>Get In Touch</p></button>
+						<button class="white"><p>Get In Touch</p></button>
 					</a>
 					
 				</div>

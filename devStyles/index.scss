@@ -16,8 +16,8 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
-	-ms-scroll-snap-type: y proximity;
-	scroll-snap-type: y proximity;
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
 	overflow-x: hidden;
 	scroll-behavior: smooth !important;
 	width: 100vw;
@@ -115,15 +115,17 @@ a {
 	border-radius: 1rem;
 	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
-
+@import "./landingView";
+@import "./projects.scss";
+@import "./aboutMe";
 @import "./components/page";
 @import "./components/stickyScroll";
-@import "./pages/landing";
 @import "./components/footer";
 @import "./components/header";
 @import "./components/buttons";
 @import "./components/icons";
-@import "./components/legal";
+@import "./components/cards";
+
 // @use "../var";
 // @import "../mixins";
 // @media (max-width: 576px) {

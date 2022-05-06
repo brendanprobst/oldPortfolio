@@ -1,14 +1,13 @@
 var footer = /*html*/ `
 <footer>
 	<div id="footer-contact">
-		<h6>Find Us Online</h6>
-		<ul class="social-icons">
-		
+		<h6>My Socials</h6>
+		<ul class="social-icons">	
 			<li>
 				<a
 					aria-label="visit quae's linkedin account"
 					class="linkedin"
-					href="https://www.linkedin.com/company/quae/ "
+					href="https://www.linkedin.com/in/brendan-probst-a951ab1a8/ "
 					target="_blank"
 					rel="noopener noreferrer"
 					><i class="fa fa-linkedin"></i
@@ -19,7 +18,7 @@ var footer = /*html*/ `
 				<a
 					aria-label="visit quae's instagram account"
 					class="instagram"
-					href="https://www.instagram.com/quaeapp/"
+					href="https://www.instagram.com/bprobst_13/"
 					target="_blank"
 					rel="noopener noreferrer"
 					><i class="fa fa-instagram"></i
@@ -29,7 +28,7 @@ var footer = /*html*/ `
 		</ul>
 		
 		<a href="mailto:bprobst1029@gmail.com" id="contact-me-button">
-			<button class="white icon">
+			<button class="primary icon">
 				<i class="material-icons">mail</i>
 				<p>Get In Touch</p>
 			</button>
