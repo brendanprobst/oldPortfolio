@@ -7,7 +7,7 @@
 			img: "/assets/img/quae_app_logo.png",
 			title: "Quae",
 			subText: "Co-Founder of Tech Startup",
-			description: `<a href="https://quae.app">Quae</a> is the main focus of my life right now. I began working on Quae with <a href="https://https://samschmitt.net/">Sam Schmitt</a> during a Launchpad hackathon where we were tasked to focus on something that pained us. We bonded over the shared conviction that representation in countries around the world was failing. We are on a mission to solve this problem by empowering everyone to be heard. <br /> <br />
+			description: `<a href="https://quae.app">Quae</a> is the main focus of my life right now. I began working on Quae with <a href="https://samschmitt.net/">Sam Schmitt</a> during a Launchpad hackathon where we were tasked to focus on something that pained us. We bonded over the shared conviction that representation in countries around the world was failing. We are on a mission to solve this problem by empowering everyone to be heard. <br /> <br />
 			We believe that democratic organizations should BE democratic - and that means everyone votes, everyone participates. Quae redefines representation by putting the people back in power and encouraging any citizen to draft a proposal, and every citizen to vote on key decisions. <br /> <br />
 			
 			Sam and I didn't know each when we began working together, but have grown to become good friends. Some of the lessons I've learned while working on this will stay with me for the rest of my life.`,

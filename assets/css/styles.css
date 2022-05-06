@@ -101,8 +101,8 @@ p {
   }
 }
 *.secondary {
-  color: #cecece;
-  opacity: 0.75;
+  color: #dddddd;
+  opacity: 0.85;
 }
 
 *.white {
@@ -174,6 +174,18 @@ p {
 
 *.padding-vert-sm {
   padding: 0.75rem 0;
+}
+
+a {
+  color: #dddddd;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #dddddd;
 }
 
 * {
@@ -297,24 +309,27 @@ a {
   padding: 1rem;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .landing-view #profile-picture {
   border: 12px solid #407bd9;
   box-shadow: 5px 0 10px -8px #151515;
+  border-radius: 2rem 4rem 4rem 4rem;
 }
 .landing-view .container {
+  max-width: 35rem;
   box-shadow: 0 0px 80px -20px #407bd9;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(4px);
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  border-radius: 4rem 2rem;
 }
 .landing-view .container .content {
   padding: 1rem;
@@ -322,11 +337,12 @@ a {
   padding-left: 1rem;
 }
 .landing-view .container h1 {
-  padding: 1rem;
-  text-align: right;
   color: #fff;
   padding: 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.landing-view .container h2 {
+  padding-left: 1rem;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
@@ -334,17 +350,12 @@ a {
     border-radius: 4rem 2rem;
   }
   .landing-view #profile-picture {
-    width: 8rem;
-    border-radius: 4rem 4rem 4rem 2rem;
+    width: min(75%, 12rem);
   }
 }
 @media only screen and (min-width: 768px) {
-  .landing-view .container {
-    border-radius: 6rem 2rem;
-  }
   .landing-view #profile-picture {
-    width: 12rem;
-    border-radius: 6rem 6rem 6em 2rem;
+    width: min(50%, 12rem);
     z-index: 3;
   }
 }
@@ -415,7 +426,7 @@ a {
 #about-me .content .not-brendan {
   flex: 1;
 }
-#about-me .content .not-brendan #education .card .header {
+#about-me .content .not-brendan #school-container .header {
   flex-direction: row-reverse;
 }
 @media (max-width: 576px) {
@@ -719,7 +730,7 @@ footer #footer-navigation {
   width: 100%;
 }
 #header.scrolled .header-content .logo-link #logo {
-  background-color: #cecece;
+  background-color: #dddddd;
   border-radius: 50%;
   opacity: 0.5;
   transition: all 200ms linear;
@@ -734,15 +745,17 @@ footer #footer-navigation {
   transition: all 100ms linear;
 }
 #header.scrolled .header-content .menu {
-  color: #407bd9;
   background-color: transparent;
+}
+#header.scrolled .header-content .menu .material-icons {
+  color: #fff;
 }
 #header.scrolled .header-content .buttons {
   transition: all 200ms linear;
 }
 #header.scrolled .header-content .buttons .primary {
   background-color: #407bd9;
-  border-color: #6f6f6f;
+  border-color: #fff;
 }
 #header.scrolled .header-content .buttons .primary p {
   color: #407bd9;
@@ -769,8 +782,8 @@ footer #footer-navigation {
   flex-wrap: nowrap;
 }
 #header .header-content .logo-link {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   z-index: 14;
   position: relative;
 }
@@ -811,7 +824,6 @@ footer #footer-navigation {
   text-decoration: none;
 }
 #header .header-content .menu {
-  background-color: #407bd9;
   z-index: 13;
 }
 #header .header-content .buttons {
@@ -846,8 +858,7 @@ footer #footer-navigation {
     right: 0;
     padding: 0.5rem;
     border-radius: 50%;
-    border: 1px solid #6f6f6f;
-    background-color: #28293c;
+    border: 1px solid #dddddd;
     margin: 1rem;
     margin-bottom: 2rem;
     color: #fff;
@@ -885,12 +896,13 @@ footer #footer-navigation {
   #header .header-content .menu {
     margin-left: auto;
     margin-right: 1rem;
+    color: #fff;
   }
 }
 @media (min-width: 800px) {
   #header .header-content .logo-link {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
   #header .header-content #navigation-links {
     display: block;
@@ -948,8 +960,8 @@ button.primary:hover {
   background-color: #3252a4;
 }
 button.secondary {
-  color: #cecece;
-  border: 2px solid #cecece;
+  color: #dddddd;
+  border: 2px solid #dddddd;
 }
 button.secondary:hover {
   background-color: #28293c;
@@ -958,7 +970,7 @@ button.secondary:hover {
 }
 button.white {
   color: #fff;
-  border: 2px solid #cecece;
+  border: 2px solid #dddddd;
 }
 button.white p {
   color: #fff;

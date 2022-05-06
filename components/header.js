@@ -3,7 +3,7 @@ const header = /*html*/ `<header id="header">
 				<div onclick="closeNav()" id="behind-navigation-links"></div>
 				<a href="/" class="logo-link">
 					<img
-					src="/assets/img/initials_transparent.png"
+					src="/assets/img/white_logo.png"
 						alt="Brendan's Logo"
 						id="logo"
 					/>

@@ -4,16 +4,19 @@
 .landing-view {
 	padding: 1rem;
 	height: calc(100vh);
-	@include flex-container(row, space-evenly, center, wrap);
+	@include flex-container(column, center, center, wrap);
 	#profile-picture {
 		border: 12px solid var.$primary-default;
 		box-shadow: 5px 0 10px -8px var.$dark;
+		border-radius: 2rem 4rem 4rem 4rem;
 	}
 	.container {
+		max-width: 35rem;
 		box-shadow: 0 0px 80px -20px var.$primary-default;
 		backdrop-filter: blur(40px);
 		-webkit-backdrop-filter: blur(4px);
-		@include flex-container(row, flex-start, center, nowrap);
+		@include flex-container(column, flex-start, flex-start, nowrap);
+		border-radius: 4rem 2rem;
 
 		.content {
 			padding: 1rem;
@@ -21,11 +24,12 @@
 			padding-left: 1rem;
 		}
 		h1 {
-			padding: 1rem;
-			text-align: right;
 			color: var.$text;
 			padding: 1rem;
 			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		h2 {
+			padding-left: 1rem;
 		}
 	}
 }
@@ -36,19 +40,16 @@
 			border-radius: 4rem 2rem;
 		}
 		#profile-picture {
-			width: max(8rem);
-			border-radius: 4rem 4rem 4rem 2rem;
+			width: min(75%, 12rem);
 		}
 	}
 }
 @media only screen and (min-width: var.$screen_M) {
 	.landing-view {
 		.container {
-			border-radius: 6rem 2rem;
 		}
 		#profile-picture {
-			width: min(12rem);
-			border-radius: 6rem 6rem 6em 2rem;
+			width: min(50%, 12rem);
 			z-index: 3;
 		}
 	}

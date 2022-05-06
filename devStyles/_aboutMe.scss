@@ -20,11 +20,9 @@
 		}
 		.not-brendan {
 			flex: 1;
-			#education {
-				.card {
-					.header {
-						flex-direction: row-reverse;
-					}
+			#school-container {
+				.header {
+					flex-direction: row-reverse;
 				}
 			}
 			#skills {

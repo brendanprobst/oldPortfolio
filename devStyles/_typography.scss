@@ -85,7 +85,7 @@ p {
 }
 *.secondary {
 	color: var.$text-secondary;
-	opacity: 0.75;
+	opacity: 0.85;
 }
 *.white {
 	color: var.$bg;
@@ -140,4 +140,15 @@ p {
 }
 *.padding-vert-sm {
 	padding: var.$S 0;
+}
+a {
+	color: var.$text-secondary;
+}
+p {
+	a {
+		text-decoration: underline;
+	}
+}
+a:visited {
+	color: var.$text-secondary;
 }

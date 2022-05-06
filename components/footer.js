@@ -5,7 +5,7 @@ var footer = /*html*/ `
 		<ul class="social-icons">	
 			<li>
 				<a
-					aria-label="visit quae's linkedin account"
+					aria-label="visit my linkedin account"
 					class="linkedin"
 					href="https://www.linkedin.com/in/brendan-probst-a951ab1a8/ "
 					target="_blank"
@@ -16,12 +16,22 @@ var footer = /*html*/ `
 			
 			<li>
 				<a
-					aria-label="visit quae's instagram account"
+					aria-label="visit my instagram account"
 					class="instagram"
 					href="https://www.instagram.com/bprobst_13/"
 					target="_blank"
 					rel="noopener noreferrer"
 					><i class="fa fa-instagram"></i
+				></a>
+			</li>
+			<li>
+				<a
+					aria-label="visit my twitter page"
+					class="twitter"
+					href="https://twitter.com/brendanprobst"
+					target="_blank"
+					rel="noopener noreferrer"
+					><i class="fa fa-twitter"></i
 				></a>
 			</li>
 		
@@ -43,11 +53,7 @@ var footer = /*html*/ `
 				<p>Projects</p>
 			</a>
 			<a href="#education" rel="noopener" class="docs">
-				<p>Education</p>
-			</a>
-			<a href="#skills" class="about-us">
-				<p>Skills</p>
-			</a>
+			
 			<a href="#about-me" class="about-us">
 				<p>About Me</p>
 			</a>
