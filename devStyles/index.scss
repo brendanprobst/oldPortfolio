@@ -1,0 +1,136 @@
+@use "./var";
+@import "./mixins";
+@import "./typography";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+	scroll-behavior: smooth !important;
+}
+html {
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+	overflow-x: hidden;
+	scroll-behavior: smooth !important;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background: linear-gradient(
+		40deg,
+		var.$primary-default 5%,
+		var.$primary-dark 30%,
+		var.$primary-dark 70%,
+		var.$primary-default 95%
+	);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+.background-img {
+	background-image: url("/assets/img/background4.png");
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	-webkit-filter: blur(8px);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.page {
+	height: 100%;
+	margin: 0 auto;
+	z-index: 1;
+}
+*::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+
+.page,
+.section,
+.section-small {
+	.title {
+		z-index: 1;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 5rem;
+		* {
+			text-align: center;
+		}
+	}
+}
+#projects-placeholder {
+	// background-color: red;
+	padding: 10rem;
+}
+.section {
+	min-height: 100vh;
+	@include flex-container(column, center, center, nowrap);
+	margin: 0 auto;
+	scroll-snap-align: start;
+	&.sticky-container {
+		// @include flex-container(row, center, flex-start, nowrap);
+		position: relative;
+		padding: 0;
+	}
+}
+.section-small {
+	min-height: 50vh;
+	@include flex-container(column, center, center, nowrap);
+	.title {
+		padding-bottom: 2rem;
+	}
+}
+
+.card {
+	background-color: var.$fg;
+	padding: 2rem;
+	margin: 0.5rem;
+	border-radius: 1rem;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+@import "./landingView";
+@import "./projects.scss";
+@import "./aboutMe";
+@import "./components/page";
+@import "./components/stickyScroll";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/cards";
+
+// @use "../var";
+// @import "../mixins";
+// @media (max-width: 576px) {
+// }
+// @media (min-width: 576px) and (max-width: 768px) {
+// }
+// @media (min-width: 768px) {
+// }

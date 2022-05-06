@@ -1,0 +1,67 @@
+@use "../var";
+@import "../mixins";
+footer {
+	background-color: var.$fg;
+	width: 100%;
+	p,
+	h6 {
+		color: var.$text;
+	}
+	#footer-contact {
+		align-items: center;
+		h6,
+		p {
+			text-align: center;
+		}
+		ul {
+			@include flex-container(row, flex-start, center, wrap);
+			padding: 0.5rem 0;
+		}
+		button {
+			width: 100%;
+			margin-top: 1rem;
+		}
+	}
+	#footer-navigation {
+		@include flex-container(row, flex-start, flex-start, wrap);
+		a {
+			color: var.$bg;
+			text-decoration: none;
+			padding-left: 0;
+			transition: all 0.25s linear;
+		}
+		a:hover {
+			text-decoration: underline;
+			padding-left: 0.5rem;
+			transition: all 0.25s linear;
+		}
+		.nav-links {
+			padding: 2rem;
+		}
+		.footer-legal {
+			padding: 2rem;
+		}
+	}
+}
+@media (max-width: 768px) {
+	footer {
+		padding: 2rem;
+		#footer-contact,
+		#footer-navigation {
+			padding-bottom: 3rem;
+		}
+		#footer-contact {
+			align-items: center;
+			ul {
+				margin: 0 auto;
+				justify-content: center;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	footer {
+		@include flex-container(row, space-evenly, center, nowrap);
+		padding: 5rem;
+	}
+}

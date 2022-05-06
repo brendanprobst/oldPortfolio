@@ -1,0 +1,29 @@
+@use "../var";
+@import "../mixins";
+.legal {
+	width: 100%;
+	p {
+		margin: 1rem auto;
+	}
+	h3 {
+		margin-top: 3rem;
+	}
+	h4 {
+		margin-top: 2rem;
+	}
+	li {
+		list-style-type: disc;
+		margin: 1rem auto;
+	}
+	button {
+		p {
+			margin: 0;
+		}
+	}
+	.section_container {
+		padding: 3rem;
+		padding-top: 5rem;
+		width: min(100%, 50rem);
+		margin: 0 auto;
+	}
+}

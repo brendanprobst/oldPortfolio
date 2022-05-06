@@ -1,0 +1,154 @@
+@use "var";
+@import "./mixins";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	padding: 0;
+	margin: 0;
+	color: var.$text;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Red Hat Display", sans-serif;
+}
+p,
+a,
+li {
+	font-family: "Poppins", sans-serif;
+}
+h1 {
+	font-size: var.$XXL;
+	font-weight: var.$Bold-weight;
+}
+
+h2 {
+	font-size: var.$XL;
+	font-weight: var.$Medium-weight;
+}
+h3 {
+	font-size: var.$L;
+	font-weight: var.$Medium-weight;
+}
+h4 {
+	font-size: var.$L;
+	font-weight: var.$Default-weight;
+}
+h5 {
+	font-size: var.$M;
+	font-weight: var.$Default-weight;
+}
+h6 {
+	font-size: var.$button;
+	font-weight: var.$Default-weight;
+}
+p {
+	font-size: var.$default;
+	font-weight: var.$Default-weight;
+}
+@media (max-width: 576px) {
+	h1 {
+		font-size: var.$XL;
+	}
+	h2 {
+		font-size: var.$L;
+		font-weight: var.$Medium-weight;
+	}
+	h3 {
+		font-size: var.$M;
+		font-weight: var.$Medium-weight;
+	}
+	h4 {
+		font-size: var.$M;
+		font-weight: var.$Default-weight;
+	}
+	h5 {
+		font-size: var.$M;
+		font-weight: var.$Default-weight;
+	}
+	h6 {
+		font-size: var.$button;
+		font-weight: var.$Default-weight;
+	}
+	p {
+		font-size: var.$default;
+		font-weight: var.$Default-weight;
+	}
+}
+*.secondary {
+	color: var.$text-secondary;
+	opacity: 0.85;
+}
+*.white {
+	color: var.$bg;
+}
+*.center {
+	text-align: center;
+}
+*.left {
+	text-align: left;
+}
+*.right {
+	text-align: right;
+}
+*.primary {
+	color: var.$primary-default;
+}
+*.primary-light {
+	color: var.$primary-light;
+}
+*.accent {
+	color: var.$accent1-dark;
+}
+*.danger {
+	color: var.$danger;
+}
+*.bold {
+	font-weight: 700;
+}
+*.link {
+	color: var.$link;
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+		button {
+			text-decoration: underline;
+		}
+	}
+}
+*.inline {
+	@include flex-container(row, center, center, wrap);
+}
+*.underline-hover:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	button {
+		text-decoration: underline;
+	}
+}
+
+*.no-wrap {
+	white-space: nowrap;
+}
+*.padding-vert-sm {
+	padding: var.$S 0;
+}
+a {
+	color: var.$text-secondary;
+}
+p {
+	a {
+		text-decoration: underline;
+	}
+}
+a:visited {
+	color: var.$text-secondary;
+}

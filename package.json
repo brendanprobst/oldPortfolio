@@ -1,0 +1,26 @@
+{
+	"name": "brendanprobstpersonalwebsite",
+	"version": "1.0.0",
+	"description": "personal website for Brendan Probst",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build_prod": "",
+		"sass": "sass --watch devStyles/index.scss:assets/css/styles.css "
+	},
+	"devScripts": {
+		"sass": "sass --watch devStyles/index.scss:assets/css/styles.css "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/brendanprobst/brendanprobst.github.io"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"cssnano": "^5.1.5",
+		"html-minifier": "^4.0.0",
+		"sass": "^1.49.9",
+		"uglifyjs": "^2.4.11"
+	}
+}

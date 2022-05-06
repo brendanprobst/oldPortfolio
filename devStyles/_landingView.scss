@@ -1,0 +1,83 @@
+@use "./var";
+@import "./mixins";
+
+.landing-view {
+	padding: 1rem;
+	height: calc(100vh);
+	@include flex-container(column, center, center, wrap);
+	#profile-picture {
+		border: 12px solid var.$primary-default;
+		box-shadow: 5px 0 10px -8px var.$dark;
+		border-radius: 2rem 4rem 4rem 4rem;
+	}
+	.container {
+		max-width: 35rem;
+		box-shadow: 0 0px 80px -20px var.$primary-default;
+		backdrop-filter: blur(40px);
+		-webkit-backdrop-filter: blur(4px);
+		@include flex-container(column, flex-start, flex-start, nowrap);
+		border-radius: 4rem 2rem;
+
+		.content {
+			padding: 1rem;
+			width: 100%;
+			padding-left: 1rem;
+		}
+		h1 {
+			color: var.$text;
+			padding: 1rem;
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		h2 {
+			padding-left: 1rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: var.$screen_M) {
+	.landing-view {
+		.container {
+			border-radius: 4rem 2rem;
+		}
+		#profile-picture {
+			width: min(75%, 12rem);
+		}
+	}
+}
+@media only screen and (min-width: var.$screen_M) {
+	.landing-view {
+		.container {
+		}
+		#profile-picture {
+			width: min(50%, 12rem);
+			z-index: 3;
+		}
+	}
+}
+
+.typed-text {
+	display: inline;
+	min-width: 1px;
+	min-height: 4rem;
+	margin-right: 0;
+	padding: 0;
+}
+#cursor {
+	display: inline-block;
+	height: 2rem;
+	padding: 1px;
+	background-color: var.$text;
+	animation: blink 1s infinite linear;
+	&.typing {
+		animation: none;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
