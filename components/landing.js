@@ -1,10 +1,10 @@
 const landing = /*html*/ `
 <div class="section landing-view">
-	<div class="container skew-scroll">
+	<div class="container skew-scroll" id="landing-container">
 		<img src="/assets/img/brendan_probst.jpg" id="profile-picture" alt="my picture" />
 		<div class="content">
-			<h1>Hi, I'm Brendan</h1>
-			<div class="subtext">
+			<h1 id="title">Hi, I'm Brendan</h1>
+			<div class="subtext" id="landing-subtext">
 				<div class="typing">
 					<h2>
 						<h2 class="typed-text"></h2>

@@ -15,14 +15,7 @@
 html {
 	margin: 0;
 	padding: 0;
-	overflow-y: scroll;
-	-ms-scroll-snap-type: y mandatory;
-	scroll-snap-type: y mandatory;
-	overflow-x: hidden;
-	scroll-behavior: smooth !important;
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
+
 	background: linear-gradient(
 		40deg,
 		var.$primary-default 5%,
@@ -35,6 +28,10 @@ html {
 body {
 	padding: 0;
 	margin: 0;
+	overflow: scroll;
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: 100vh;
 	overflow-x: hidden;
 }
 .background-img {
@@ -125,6 +122,7 @@ a {
 @import "./components/buttons";
 @import "./components/icons";
 @import "./components/cards";
+@import "./animation";
 
 // @use "../var";
 // @import "../mixins";

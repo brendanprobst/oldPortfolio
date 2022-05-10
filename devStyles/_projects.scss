@@ -1,0 +1,14 @@
+@use "./var";
+@import "./mixins";
+
+#projects-container {
+	width: 100%;
+	margin-top: 5rem;
+	@include flex-container(column, flex-start, center, nowrap);
+	.card {
+		height: 100%;
+	}
+}
+.project-wrapper {
+	min-height: 100vh;
+}

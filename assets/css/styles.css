@@ -179,6 +179,9 @@ p {
 a {
   color: #dddddd;
 }
+a:hover {
+  color: #6be194 !important;
+}
 
 p a {
   text-decoration: underline;
@@ -197,20 +200,16 @@ a:visited {
 html {
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
-  overflow-x: hidden;
-  scroll-behavior: smooth !important;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
   background: linear-gradient(40deg, #407bd9 5%, #3252a4 30%, #3252a4 70%, #407bd9 95%);
 }
 
 body {
   padding: 0;
   margin: 0;
+  overflow: scroll;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: 100vh;
   overflow-x: hidden;
 }
 
@@ -388,6 +387,7 @@ a {
 }
 #projects-container {
   width: 100%;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,6 +396,10 @@ a {
 }
 #projects-container .card {
   height: 100%;
+}
+
+.project-wrapper {
+  min-height: 100vh;
 }
 
 #about-me .content {
@@ -729,19 +733,15 @@ footer #footer-navigation {
   flex-wrap: nowrap;
   width: 100%;
 }
-#header.scrolled .header-content .logo-link #logo {
-  background-color: #dddddd;
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: all 200ms linear;
-}
 #header.scrolled .header-content #navigation-links a {
+  color: #fff;
   transition: all 100ms linear;
 }
 #header.scrolled .header-content #navigation-links a:hover {
-  text-decoration: underline;
-  text-decoration-color: #407bd9;
-  padding-bottom: 0.25rem;
+  border-bottom: 3px solid #3252a4;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 0.125rem;
   transition: all 100ms linear;
 }
 #header.scrolled .header-content .menu {
@@ -749,28 +749,6 @@ footer #footer-navigation {
 }
 #header.scrolled .header-content .menu .material-icons {
   color: #fff;
-}
-#header.scrolled .header-content .buttons {
-  transition: all 200ms linear;
-}
-#header.scrolled .header-content .buttons .primary {
-  background-color: #407bd9;
-  border-color: #fff;
-}
-#header.scrolled .header-content .buttons .primary p {
-  color: #407bd9;
-}
-#header.scrolled .header-content .buttons .primary:hover {
-  background-color: #28293c;
-}
-#header.scrolled .header-content .buttons .secondary {
-  border-color: #6f6f6f;
-}
-#header.scrolled .header-content .buttons .secondary p {
-  color: #407bd9;
-}
-#header.scrolled .header-content .buttons .secondary:hover {
-  background-color: #5ca0f4;
 }
 #header .header-content {
   max-width: 80rem;
@@ -824,13 +802,6 @@ footer #footer-navigation {
   text-decoration: none;
 }
 #header .header-content .menu {
-  z-index: 13;
-}
-#header .header-content .buttons {
-  transition: all 200ms linear;
-  z-index: 13;
-}
-#header .header-content .buttons a {
   z-index: 13;
 }
 
@@ -918,10 +889,6 @@ footer #footer-navigation {
   }
   #header .header-content .menu {
     display: none;
-  }
-
-  #header.scrolled .header-content #navigation-links p {
-    color: #407bd9;
   }
 }
 button {
@@ -1147,7 +1114,7 @@ button.select-group:active {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -1200,7 +1167,7 @@ button.select-group:active {
   color: #fff;
 }
 .card.card-small {
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
 }
 .card.card-small .header {
@@ -1216,6 +1183,43 @@ button.select-group:active {
 }
 .card.card-small .tags li {
   padding: 0.125rem 0.5rem;
+}
+
+#profile-picture {
+  animation: render 1s linear;
+}
+
+#landing-subtext {
+  animation: render2 1s linear;
+}
+
+#title {
+  animation: render2 1s linear;
+}
+
+@keyframes render {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes render2 {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

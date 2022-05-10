@@ -1,0 +1,34 @@
+#profile-picture {
+	animation: render 1s linear;
+}
+#landing-subtext {
+	animation: render2 1s linear;
+}
+#title {
+	animation: render2 1s linear;
+}
+@keyframes render {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes render2 {
+	0% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+	10% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}

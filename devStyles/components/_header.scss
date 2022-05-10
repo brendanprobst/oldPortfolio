@@ -36,22 +36,17 @@
 		.header-content {
 			@include flex-container(row, space-between, center, nowrap);
 			width: 100%;
-			.logo-link {
-				#logo {
-					background-color: var.$text-secondary;
-					border-radius: 50%;
-					opacity: 0.5;
-					transition: all 200ms linear;
-				}
-			}
+
 			#navigation-links {
 				a {
+					color: var.$text;
 					transition: all 100ms linear;
 				}
 				a:hover {
-					text-decoration: underline;
-					text-decoration-color: var.$bg;
-					padding-bottom: 0.25rem;
+					border-bottom: 3px solid var.$primary-dark;
+					text-decoration: none;
+					cursor: pointer;
+					padding-bottom: 0.125rem;
 					transition: all 100ms linear;
 				}
 			}
@@ -59,28 +54,6 @@
 				background-color: transparent;
 				.material-icons {
 					color: var.$text;
-				}
-			}
-			.buttons {
-				transition: all 200ms linear;
-				.primary {
-					background-color: var.$bg;
-					border-color: var.$text;
-					p {
-						color: var.$primary-default;
-					}
-					&:hover {
-						background-color: var.$fg;
-					}
-				}
-				.secondary {
-					border-color: var.$border;
-					p {
-						color: var.$bg;
-					}
-					&:hover {
-						background-color: var.$primary-light;
-					}
 				}
 			}
 		}
@@ -133,14 +106,6 @@
 		}
 		.menu {
 			z-index: 13;
-		}
-		.buttons {
-			transition: all 200ms linear;
-
-			z-index: 13;
-			a {
-				z-index: 13;
-			}
 		}
 	}
 }
@@ -232,15 +197,6 @@
 			}
 			.menu {
 				display: none;
-			}
-		}
-	}
-	#header.scrolled {
-		.header-content {
-			#navigation-links {
-				p {
-					color: var.$bg;
-				}
 			}
 		}
 	}

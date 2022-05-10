@@ -37,7 +37,6 @@
 		},
 	];
 	for (let school of schoolList) {
-		console.log(school);
 		let newSchool = document.createElement("article");
 		newSchool.id = school.title;
 		newSchool.innerHTML = /* html */ `

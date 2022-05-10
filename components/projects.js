@@ -42,27 +42,28 @@
 		},
 	];
 	for (let project of projectsList) {
-		let newProject = document.createElement("article");
-		newProject.className = "card";
+		let newProject = document.createElement("div");
+		newProject.className = "project-wrapper";
 		newProject.id = project.title;
 		newProject.innerHTML = /* html */ `
-		<div class="header">
-			<img src=${project.img} alt=${project.imgAlt} class="header-img" />
-			<div class="text">
-				<div>
-					<h3>${project.title}</h3>
-					<h6>${project.subText}</h6>
+		<article class='card fade-slide-in'>
+			<div class="header">
+				<img src=${project.img} alt=${project.imgAlt} class="header-img" />
+				<div class="text">
+					<div>
+						<h3>${project.title}</h3>
+						<h6>${project.subText}</h6>
+					</div>
+						<a href=${project.link} class="right">
+						Learn More
+						</a>
 				</div>
-					<a href=${project.link} class="right">
-					<p class="secondary">Learn More</p>
-					</a>
 			</div>
-		</div>
-		<div class="content">
-		<p id="${project.title}-description"></p>
-		</div>
-		<ul id="${project.title}-tags" class="tags"></ul>
-		
+			<div class="content">
+				<p id="${project.title}-description"></p>
+			</div>
+			<ul id="${project.title}-tags" class="tags"></ul>
+		</article>
 	`;
 
 		projectContainer.appendChild(newProject);

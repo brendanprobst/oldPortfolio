@@ -89,11 +89,11 @@ $(document).ready(function () {
 			setTimeout(type, newTextDelay + 250);
 		});
 		type();
-		//SKEW SCROLL
 
+		//SKEW SCROLL
 		function skewScroll(element) {
-			console.log($(window).scrollTop());
-			console.log(element.getBoundingClientRect().top);
+			// console.log($(window).scrollTop());
+			// console.log(element.getBoundingClientRect().top);
 			const rotation = window.scrollY / window_height;
 
 			// element.style.webkitTransform = `rotate(${rotation}deg)`;
@@ -111,36 +111,10 @@ $(document).ready(function () {
 		}
 		const skewScrollElements = document.querySelectorAll(".skew-scroll");
 		skewScrollElements.forEach((element) => skewScroll(element));
-		const rotateBgImg = () => {
-			const bgImg = document.querySelector(".background-img");
-			const rotation = (window.scrollY / disToScroll) * 360;
-			bgImg.animate(
-				{
-					"-webkit-transform": "rotate(" + rotation + "deg)",
-					"-moz-transform": "rotate(" + rotation + "deg)",
-					"-ms-transform": "rotate(" + rotation + "deg)",
-					"-o-transform": "rotate(" + rotation + "deg)",
-					transform: "rotate(" + rotation + "deg)",
-					zoom: 1,
-				},
-				10
-			);
-		};
-		document.addEventListener("scroll", skewScroll);
-		// document.addEventListener("scroll", rotateBgImg);
+
+		// document.addEventListener("scroll", skewScroll);
 
 		//HEADER
-
-		document.addEventListener("scroll", function () {
-			let scroll = window.scrollY;
-			console.log("scrolled");
-			if (scroll > 40) {
-				document.querySelector("#header").classList.add("scrolled");
-			}
-			if (scroll < 40) {
-				document.querySelector("#header").classList.remove("scrolled");
-			}
-		});
 	});
 });
 // function fade() {

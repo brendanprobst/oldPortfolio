@@ -33,11 +33,10 @@ const header = /*html*/ `<header id="header">
 				</div>
 			</div>
 		</header>`;
-function renderHeader() {
+(function renderHeader() {
 	const placeholder = document.querySelector("#header-placeholder");
 	placeholder.innerHTML = header;
-}
-renderHeader();
+})();
 var navVisible = false;
 function toggleNav() {
 	if (navVisible) {
@@ -54,20 +53,12 @@ function closeNav() {
 	document.getElementById("behind-navigation-links").style.display = "none";
 	document.getElementById("navigation-links").style.display = "none";
 }
-
-// (function () {
-// 	const socialIcons = [
-// 		{
-// 			icon: <GitHubIcon />,
-// 			destination: "https://github.com/brendanprobst",
-// 		},
-
-// 		{
-// 			icon: <InstagramIcon />,
-// 			destination: "https://www.instagram.com/bprobst_13/",
-// 		},
-// 	];
-// 	for (icon of socialIcons) {
-// 		var icon = document.createElement("img");
-// 	}
-// })();
+document.addEventListener("scroll", function () {
+	let scroll = window.scrollY;
+	if (scroll > 40) {
+		document.querySelector("#header").classList.add("scrolled");
+	}
+	if (scroll < 40) {
+		document.querySelector("#header").classList.remove("scrolled");
+	}
+});

@@ -1,7 +1,7 @@
 @import "../mixins";
 @import "../var";
 .card {
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.05);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
@@ -43,7 +43,7 @@
 		}
 	}
 	&.card-small {
-		padding: 0.5rem;
+		padding: 1rem;
 		border-radius: 0.5rem;
 		.header {
 			padding-right: 0.5rem;
