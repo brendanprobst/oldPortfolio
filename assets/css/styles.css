@@ -209,7 +209,7 @@ body {
   overflow: scroll;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
-  scroll-snap-align: 100vh;
+  scroll-padding-top: 4rem;
   overflow-x: hidden;
 }
 
@@ -270,14 +270,16 @@ a {
 }
 
 .section {
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem);
+  scroll-snap-align: start;
+  border-bottom: 1px solid #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   margin: 0 auto;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 .section.sticky-container {
   position: relative;
@@ -294,14 +296,6 @@ a {
 }
 .section-small .title {
   padding-bottom: 2rem;
-}
-
-.card {
-  background-color: #28293c;
-  padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
 .landing-view {
@@ -385,6 +379,32 @@ a {
     opacity: 0;
   }
 }
+#projects-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 60%;
+}
+
+.project-menu-button {
+  padding: 1rem;
+}
+.project-menu-button .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-width: 5rem;
+}
+.project-menu-button .card img {
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
 #projects-container {
   width: 100%;
   margin-top: 5rem;
@@ -685,31 +705,8 @@ footer #footer-navigation {
     padding: 5rem;
   }
 }
-#small-header {
-  width: 100%;
-  height: 2rem;
-}
-#small-header a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(50%, 50%);
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-}
-#small-header a img {
-  height: 2rem;
-  width: 2rem;
-}
-#small-header a h6 {
-  margin-left: 0.5rem;
-}
-
 #header {
+  height: 4rem;
   transition: all 200ms linear;
   left: 0;
   top: 0;

@@ -1,10 +1,11 @@
 (function () {
 	//render projects
 	const projectContainer = document.querySelector("#projects-container");
-
+	const projectsMenu = document.querySelector("#projects-menu");
 	const projectsList = [
 		{
 			img: "/assets/img/quae_app_logo.png",
+			imgAlt: "quae project logo",
 			title: "Quae",
 			subText: "Co-Founder of Tech Startup",
 			description: `<a href="https://quae.app">Quae</a> is the main focus of my life right now. I began working on Quae with <a href="https://samschmitt.net/">Sam Schmitt</a> during a Launchpad hackathon where we were tasked to focus on something that pained us. We bonded over the shared conviction that representation in countries around the world was failing. We are on a mission to solve this problem by empowering everyone to be heard. <br /> <br />
@@ -22,6 +23,8 @@
 		},
 		{
 			img: "/assets/img/LN_logo.png",
+			imgAlt: "leavenow project logo",
+
 			title: "LeaveNow",
 			subText: "School Project Turned Side Hustle",
 			description: `LeaveNow was a fun idea that I thought of while hanging out with a <a href="https://https://samschmitt.net/">friend</a>. We were talking about the pure joy you feel when you're planning to meet someone somewhere and arrive at exactly the same time. "Serendipitous" - we called it. We immediately planned out how you would develop an app to make that happen every time, laughed about it, and moved on. <br /><br />
@@ -33,6 +36,8 @@
 		},
 		{
 			img: "/assets/img/pixlow.png",
+			imgAlt: "pixlowchat project logo",
+
 			title: "PixlowChat",
 			subText: "Chat with friends... with an 8-bit aesthetic",
 			description:
@@ -42,8 +47,9 @@
 		},
 	];
 	for (let project of projectsList) {
+		// big project
 		let newProject = document.createElement("div");
-		newProject.className = "project-wrapper";
+		newProject.className = "section";
 		newProject.id = project.title;
 		newProject.innerHTML = /* html */ `
 		<article class='card fade-slide-in'>
@@ -75,5 +81,18 @@
 			item.innerHTML = tag;
 			tagContainer.appendChild(item);
 		}
+		//projectMenuButton
+		let projectMenuButton = document.createElement("a");
+		projectMenuButton.href = "#" + project.title;
+		projectMenuButton.className = "project-menu-button";
+		console.log(projectMenuButton);
+		projectMenuButton.innerHTML = /* html */ `
+		<div class="card">
+		<img src="${project.img}" alt="${project.imgAlt}"/>
+		<p>${project.title}</p>
+		</div>
+		`;
+
+		projectsMenu.appendChild(projectMenuButton);
 	}
 })();
